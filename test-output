@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<style>
+.cucumber-react .cucumber-status--passed {
+  color: #2CB14A;
+}
+.cucumber-react .cucumber-status--skipped {
+  color: #00A0CC;
+}
+.cucumber-react .cucumber-status--pending {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--undefined {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .cucumber-status--failed {
+  color: #BB0000;
+}
+.cucumber-react .cucumber-status--unknown {
+  color: #B6BECB;
+}
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin: 0;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .cucumber-title {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react .cucumber-title__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-title__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-tags {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .cucumber-tags .cucumber-tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .cucumber-feature__icon {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-description,
+.cucumber-react .cucumber-children {
+  margin-left: 1em;
+}
+.cucumber-react .cucumber-feature,
+.cucumber-react .cucumber-rule,
+.cucumber-react .cucumber-scenario,
+.cucumber-react .cucumber-background {
+  margin-bottom: 1em;
+}
+.cucumber-react .cucumber-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.cucumber-react .cucumber-steps .cucumber-step {
+  display: flex;
+}
+.cucumber-react .cucumber-steps .cucumber-step__status {
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-steps .cucumber-step__content {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-steps .cucumber-step__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-steps .cucumber-step__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-steps .cucumber-step__param {
+  font-weight: normal;
+  font-style: italic;
+}
+.cucumber-react .cucumber-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .cucumber-table__header-cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .cucumber-table__cell__step {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-code {
+  padding: 0.25em;
+  background-color: #ebebeb;
+}
+.cucumber-react .cucumber-error {
+  padding: 0.5em;
+  margin: 0;
+  overflow: scroll;
+}
+.cucumber-react .cucumber-no-documents {
+  font: 14px "Open Sans", sans-serif;
+}
+.cucumber-react .cucumber-attachment {
+  background-color: #ebebeb;
+  padding: 0.5em;
+}
+.cucumber-react .cucumber-attachment__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-attachment__image {
+  margin-top: 1em;
+}
+.cucumber-react .cucumber-anchor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.cucumber-react .cucumber-anchor__link {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+}
+.cucumber-react .cucumber-anchor__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-anchor:hover a {
+  opacity: 1;
+  width: max-content;
+  transition: all 0.35s ease-in-out;
+}
+.cucumber-react .cucumber-anchor > * {
+  height: 100%;
+  margin-top: 0px;
+}
+
+.cucumber-report-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font: 11px "Open Sans", sans-serif;
+  margin-bottom: 1em;
+}
+.cucumber-report-header > * {
+  padding: 1em;
+}
+.cucumber-report-header .cucumber-status-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-status-filter table {
+  width: 100%;
+}
+.cucumber-report-header .cucumber-execution-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-search-bar {
+  border-right: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search input {
+  padding: 0.4em;
+  border-radius: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search button {
+  height: 2.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar p.help {
+  font-size: 80%;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul {
+  display: inline;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li input {
+  display: inline-block;
+  width: auto;
+  height: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li label {
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-execution-data {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: auto;
+  }
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"13.0.1","implementation":{"name":"cucumber-jvm","version":"6.6.0"},"runtime":{"name":"Java HotSpot(TM) 64-Bit Server VM","version":"14.0.1+7"},"os":{"name":"Windows 10"},"cpu":{"name":"amd64"}}},{"testRunStarted":{"timestamp":{"seconds":"1639409454","nanos":598150600}}},{"source":{"uri":"file:///C:/Users/Karthika/eclipse-workspace/ManiCucumber2022/src/test/resources/Features/Check24AutomationTask.feature","data":"Feature: Registration\n\n   #TC-1\n   Scenario: Successfull Cookie Validation\n    When User opens the URL \"https://finanzen.check24.de/accounts/d/kreditkarte/result.html\"\n    And User performs the cookie validation\n   \n   #TC-2\n   Scenario: Successfull Page navigation after filling email id \n   When User Enters the emailaddress\n   Then User get navigated to next Registerationpage successfully\n   \n    \n    #TC-3\n   Scenario: Successfull Page navigation after clicking on the registration radio button\n   When User click on the Registration radio button\n   Then User get navigated to next personalinfopage successfully\n   \n    #TC-4\n   Scenario: Successfull Error messages validation\n   When User click on submit button without form data\n   Then Validate the empty fields are shown with error message\n  \n   #TC-5\n   Scenario: Successfull Submission of the form\n   When User click on submit button with valid formdata\n   Then User navigated to the next form page\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///C:/Users/Karthika/eclipse-workspace/ManiCucumber2022/src/test/resources/Features/Check24AutomationTask.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Registration","children":[{"scenario":{"location":{"line":4,"column":4},"keyword":"Scenario","name":"Successfull Cookie Validation","steps":[{"location":{"line":5,"column":5},"keyword":"When ","text":"User opens the URL \"https://finanzen.check24.de/accounts/d/kreditkarte/result.html\"","id":"798230be-9f86-4f16-b898-31a9469280db"},{"location":{"line":6,"column":5},"keyword":"And ","text":"User performs the cookie validation","id":"c1414ad6-5577-4d3b-ae67-af5e22bb33c9"}],"id":"b79337d3-3fbc-462e-92d1-39ac24229be3"}},{"scenario":{"location":{"line":9,"column":4},"keyword":"Scenario","name":"Successfull Page navigation after filling email id","steps":[{"location":{"line":10,"column":4},"keyword":"When ","text":"User Enters the emailaddress","id":"d1b0812d-5e42-44e8-a939-82fb73622bc4"},{"location":{"line":11,"column":4},"keyword":"Then ","text":"User get navigated to next Registerationpage successfully","id":"29ee0208-6f80-4a2d-8bfb-5820ca61d4e4"}],"id":"3e8c5013-ff77-4c79-9f6b-83f0ba5a4811"}},{"scenario":{"location":{"line":15,"column":4},"keyword":"Scenario","name":"Successfull Page navigation after clicking on the registration radio button","steps":[{"location":{"line":16,"column":4},"keyword":"When ","text":"User click on the Registration radio button","id":"b6cba463-bb8a-4de0-93a3-352f36603623"},{"location":{"line":17,"column":4},"keyword":"Then ","text":"User get navigated to next personalinfopage successfully","id":"1516af0e-29b4-449f-86af-c86c57363647"}],"id":"b8e8abc0-1fec-4170-9dcb-32684f8368fd"}},{"scenario":{"location":{"line":20,"column":4},"keyword":"Scenario","name":"Successfull Error messages validation","steps":[{"location":{"line":21,"column":4},"keyword":"When ","text":"User click on submit button without form data","id":"016bc9fa-871c-4f56-80e8-ca78fb2be73f"},{"location":{"line":22,"column":4},"keyword":"Then ","text":"Validate the empty fields are shown with error message","id":"d0e7eb33-3e85-4bf7-b64b-8344ca0a9481"}],"id":"c65ec827-5094-4ff9-9c57-c3792d949720"}},{"scenario":{"location":{"line":25,"column":4},"keyword":"Scenario","name":"Successfull Submission of the form","steps":[{"location":{"line":26,"column":4},"keyword":"When ","text":"User click on submit button with valid formdata","id":"4498801c-c83e-4aed-a8ae-b7db33168361"},{"location":{"line":27,"column":4},"keyword":"Then ","text":"User navigated to the next form page","id":"b1df13c6-1ba3-496d-acfc-d9c5980eb8f9"}],"id":"bb3cb178-a591-4939-bda5-69cbfb9aad3d"}}]},"comments":[{"location":{"line":3,"column":1},"text":"   #TC-1"},{"location":{"line":8,"column":1},"text":"   #TC-2"},{"location":{"line":14,"column":1},"text":"    #TC-3"},{"location":{"line":19,"column":1},"text":"    #TC-4"},{"location":{"line":24,"column":1},"text":"   #TC-5"}]}},{"pickle":{"id":"f52fe484-156f-42a7-9ec4-59c2cb66e993","uri":"file:///C:/Users/Karthika/eclipse-workspace/ManiCucumber2022/src/test/resources/Features/Check24AutomationTask.feature","name":"Successfull Cookie Validation","language":"en","steps":[{"text":"User opens the URL \"https://finanzen.check24.de/accounts/d/kreditkarte/result.html\"","id":"3f152e14-58a4-45e7-a5aa-2549abb5909f","astNodeIds":["798230be-9f86-4f16-b898-31a9469280db"]},{"text":"User performs the cookie validation","id":"afc51276-1893-4d8a-9083-5fd914eb0f65","astNodeIds":["c1414ad6-5577-4d3b-ae67-af5e22bb33c9"]}],"astNodeIds":["b79337d3-3fbc-462e-92d1-39ac24229be3"]}},{"pickle":{"id":"e0430e23-7a1b-4b21-bd8f-dd51647aabe9","uri":"file:///C:/Users/Karthika/eclipse-workspace/ManiCucumber2022/src/test/resources/Features/Check24AutomationTask.feature","name":"Successfull Page navigation after filling email id","language":"en","steps":[{"text":"User Enters the emailaddress","id":"ea9ad65f-9117-4944-901b-6ff9c9525fc9","astNodeIds":["d1b0812d-5e42-44e8-a939-82fb73622bc4"]},{"text":"User get navigated to next Registerationpage successfully","id":"8caa7f70-c093-4865-a302-7aa95931e6b4","astNodeIds":["29ee0208-6f80-4a2d-8bfb-5820ca61d4e4"]}],"astNodeIds":["3e8c5013-ff77-4c79-9f6b-83f0ba5a4811"]}},{"pickle":{"id":"eed5f7fb-b4b9-4525-8d55-c4459c05accd","uri":"file:///C:/Users/Karthika/eclipse-workspace/ManiCucumber2022/src/test/resources/Features/Check24AutomationTask.feature","name":"Successfull Page navigation after clicking on the registration radio button","language":"en","steps":[{"text":"User click on the Registration radio button","id":"1b3e443f-83bd-48d0-b642-7c55ba7503a2","astNodeIds":["b6cba463-bb8a-4de0-93a3-352f36603623"]},{"text":"User get navigated to next personalinfopage successfully","id":"df7ef034-9f70-4d44-8711-67f84d73452e","astNodeIds":["1516af0e-29b4-449f-86af-c86c57363647"]}],"astNodeIds":["b8e8abc0-1fec-4170-9dcb-32684f8368fd"]}},{"pickle":{"id":"153c3244-1967-4b09-b1c3-1253c645d55a","uri":"file:///C:/Users/Karthika/eclipse-workspace/ManiCucumber2022/src/test/resources/Features/Check24AutomationTask.feature","name":"Successfull Error messages validation","language":"en","steps":[{"text":"User click on submit button without form data","id":"cdbc22c0-ca2b-4283-8d35-e62297c6d10a","astNodeIds":["016bc9fa-871c-4f56-80e8-ca78fb2be73f"]},{"text":"Validate the empty fields are shown with error message","id":"f880c62f-d73f-4ac5-8c70-fc7650cc5296","astNodeIds":["d0e7eb33-3e85-4bf7-b64b-8344ca0a9481"]}],"astNodeIds":["c65ec827-5094-4ff9-9c57-c3792d949720"]}},{"pickle":{"id":"cf536a5f-9736-4028-be4d-217f90ccb5c2","uri":"file:///C:/Users/Karthika/eclipse-workspace/ManiCucumber2022/src/test/resources/Features/Check24AutomationTask.feature","name":"Successfull Submission of the form","language":"en","steps":[{"text":"User click on submit button with valid formdata","id":"f62a56bb-40ae-4e13-bd84-789c8e35bb5e","astNodeIds":["4498801c-c83e-4aed-a8ae-b7db33168361"]},{"text":"User navigated to the next form page","id":"bd95c8d6-df99-4676-a420-aa39d8222825","astNodeIds":["b1df13c6-1ba3-496d-acfc-d9c5980eb8f9"]}],"astNodeIds":["bb3cb178-a591-4939-bda5-69cbfb9aad3d"]}},{"stepDefinition":{"id":"735976e1-fbd6-4a23-8c27-84d5f6fd7367","pattern":{"source":"User performs the cookie validation"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_performs_the_cookie_validation"}}}},{"stepDefinition":{"id":"17a4cd76-3990-4cfb-8a6a-77b2ae81bc59","pattern":{"source":"User click on submit button with valid formdata"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_click_on_submit_button_with_valid_formdata"}}}},{"stepDefinition":{"id":"368e3c01-22f1-441e-9058-2cae3d24fe62","pattern":{"source":"User click on the Registration radio button"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_click_on_the_registration_radio_button"}}}},{"stepDefinition":{"id":"0363abe0-f83f-46bc-88c2-99d2bc11bea3","pattern":{"source":"User navigated to the next form page"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_navigated_to_the_next_form_page"}}}},{"stepDefinition":{"id":"a8517aac-7066-4a7d-95b4-e9e9dfc4e65f","pattern":{"source":"User click on submit button without form data"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_click_on_submit_button_without_form_data"}}}},{"stepDefinition":{"id":"3d481194-f619-49d2-aacf-06ff58a833d9","pattern":{"source":"User get navigated to next Registerationpage successfully"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_get_navigated_to_next_registerationpage_successfully"}}}},{"stepDefinition":{"id":"ee1b7e9c-20a3-4ff0-83b0-eb4cf9fa0d1f","pattern":{"source":"User get navigated to next personalinfopage successfully"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_get_navigated_to_next_personalinfopage_successfully"}}}},{"stepDefinition":{"id":"c217f7ee-9272-471a-bbac-382999e46890","pattern":{"source":"Validate the empty fields are shown with error message"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"validate_the_empty_fields_are_shown_with_error_message"}}}},{"stepDefinition":{"id":"08587d6f-129b-4b32-b535-6283a6cab0d8","pattern":{"source":"User opens the URL {string}"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_opens_the_url","methodParameterTypes":["java.lang.String"]}}}},{"stepDefinition":{"id":"29f1d89b-fdc3-468c-8526-72ea5b4b6585","pattern":{"source":"User Enters the emailaddress"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_enters_the_emailaddress"}}}},{"hook":{"id":"a83178b6-6831-4e8a-86f0-f88481f9a770","sourceReference":{"javaMethod":{"className":"Stepdefs.BaseClass","methodName":"afterScenario","methodParameterTypes":["io.cucumber.java.Scenario"]}}}},{"testCase":{"id":"791b52a0-a498-4848-8d6b-1cda23821e1f","pickleId":"f52fe484-156f-42a7-9ec4-59c2cb66e993","testSteps":[{"id":"444b994f-d438-49bb-8959-d9eaf602ca80","pickleStepId":"3f152e14-58a4-45e7-a5aa-2549abb5909f","stepDefinitionIds":["08587d6f-129b-4b32-b535-6283a6cab0d8"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":19,"value":"\"https://finanzen.check24.de/accounts/d/kreditkarte/result.html\"","children":[{"start":20,"value":"https://finanzen.check24.de/accounts/d/kreditkarte/result.html","children":[{}]},{"children":[{}]}]}}]}]},{"id":"a144f6ff-47fb-4aba-9f85-9136f19180c7","pickleStepId":"afc51276-1893-4d8a-9083-5fd914eb0f65","stepDefinitionIds":["735976e1-fbd6-4a23-8c27-84d5f6fd7367"],"stepMatchArgumentsLists":[{}]},{"id":"ddfa04d2-20f7-4df4-9c91-7477234204a8","hookId":"a83178b6-6831-4e8a-86f0-f88481f9a770"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1639409454","nanos":767696500},"testCaseId":"791b52a0-a498-4848-8d6b-1cda23821e1f","id":"3754cb93-3bee-4f8e-bdc2-84ba6cd205f8"}},{"testStepStarted":{"timestamp":{"seconds":"1639409454","nanos":829531600},"testStepId":"444b994f-d438-49bb-8959-d9eaf602ca80","testCaseStartedId":"3754cb93-3bee-4f8e-bdc2-84ba6cd205f8"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"13","nanos":904602600}},"timestamp":{"seconds":"1639409468","nanos":734134200},"testStepId":"444b994f-d438-49bb-8959-d9eaf602ca80","testCaseStartedId":"3754cb93-3bee-4f8e-bdc2-84ba6cd205f8"}},{"testStepStarted":{"timestamp":{"seconds":"1639409468","nanos":744108300},"testStepId":"a144f6ff-47fb-4aba-9f85-9136f19180c7","testCaseStartedId":"3754cb93-3bee-4f8e-bdc2-84ba6cd205f8"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":13984800}},"timestamp":{"seconds":"1639409468","nanos":758093100},"testStepId":"a144f6ff-47fb-4aba-9f85-9136f19180c7","testCaseStartedId":"3754cb93-3bee-4f8e-bdc2-84ba6cd205f8"}},{"testStepStarted":{"timestamp":{"seconds":"1639409468","nanos":759092700},"testStepId":"ddfa04d2-20f7-4df4-9c91-7477234204a8","testCaseStartedId":"3754cb93-3bee-4f8e-bdc2-84ba6cd205f8"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":971100}},"timestamp":{"seconds":"1639409468","nanos":760063800},"testStepId":"ddfa04d2-20f7-4df4-9c91-7477234204a8","testCaseStartedId":"3754cb93-3bee-4f8e-bdc2-84ba6cd205f8"}},{"testCaseFinished":{"timestamp":{"seconds":"1639409468","nanos":761091800},"testCaseStartedId":"3754cb93-3bee-4f8e-bdc2-84ba6cd205f8"}},{"stepDefinition":{"id":"ffe22458-2a53-4b23-8632-935773994d1a","pattern":{"source":"User performs the cookie validation"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_performs_the_cookie_validation"}}}},{"stepDefinition":{"id":"b4173a03-04fa-4640-a8c3-1d463625a9eb","pattern":{"source":"User click on submit button with valid formdata"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_click_on_submit_button_with_valid_formdata"}}}},{"stepDefinition":{"id":"f320ec6a-9954-49cb-b385-c307537a2444","pattern":{"source":"User click on the Registration radio button"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_click_on_the_registration_radio_button"}}}},{"stepDefinition":{"id":"bffe76b2-364b-4513-8c9c-9bc55c106dfb","pattern":{"source":"User navigated to the next form page"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_navigated_to_the_next_form_page"}}}},{"stepDefinition":{"id":"bdf0e4e0-e3f5-4f75-8e83-83a01ad90bca","pattern":{"source":"User click on submit button without form data"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_click_on_submit_button_without_form_data"}}}},{"stepDefinition":{"id":"4767ebfa-02a9-4b87-bb86-b54d02fcd4c0","pattern":{"source":"User get navigated to next Registerationpage successfully"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_get_navigated_to_next_registerationpage_successfully"}}}},{"stepDefinition":{"id":"cc721d36-3463-4c77-b8a4-cd89e773c8f4","pattern":{"source":"User get navigated to next personalinfopage successfully"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_get_navigated_to_next_personalinfopage_successfully"}}}},{"stepDefinition":{"id":"b36db05a-610b-4de5-a4cc-1decdb24bd8f","pattern":{"source":"Validate the empty fields are shown with error message"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"validate_the_empty_fields_are_shown_with_error_message"}}}},{"stepDefinition":{"id":"3a22a3e2-f6f0-43e9-a9d5-ec7c9d6549ca","pattern":{"source":"User opens the URL {string}"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_opens_the_url","methodParameterTypes":["java.lang.String"]}}}},{"stepDefinition":{"id":"f5c40655-07a0-42ae-bab8-a21bf22c1ff9","pattern":{"source":"User Enters the emailaddress"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_enters_the_emailaddress"}}}},{"hook":{"id":"a83178b6-6831-4e8a-86f0-f88481f9a770","sourceReference":{"javaMethod":{"className":"Stepdefs.BaseClass","methodName":"afterScenario","methodParameterTypes":["io.cucumber.java.Scenario"]}}}},{"testCase":{"id":"397d6e96-93cb-4a4d-8bbc-9b32c7fa1174","pickleId":"e0430e23-7a1b-4b21-bd8f-dd51647aabe9","testSteps":[{"id":"77fda82d-a198-4cca-a5fe-bc37df9bd112","pickleStepId":"ea9ad65f-9117-4944-901b-6ff9c9525fc9","stepDefinitionIds":["f5c40655-07a0-42ae-bab8-a21bf22c1ff9"],"stepMatchArgumentsLists":[{}]},{"id":"0a71d6ba-673b-4581-af91-93c665bca429","pickleStepId":"8caa7f70-c093-4865-a302-7aa95931e6b4","stepDefinitionIds":["4767ebfa-02a9-4b87-bb86-b54d02fcd4c0"],"stepMatchArgumentsLists":[{}]},{"id":"a4ab70fa-a945-4a7e-8465-eb56a7ed0edb","hookId":"a83178b6-6831-4e8a-86f0-f88481f9a770"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1639409468","nanos":769038200},"testCaseId":"397d6e96-93cb-4a4d-8bbc-9b32c7fa1174","id":"5b3859da-a80e-4835-8795-e4ff9812ad11"}},{"testStepStarted":{"timestamp":{"seconds":"1639409468","nanos":769038200},"testStepId":"77fda82d-a198-4cca-a5fe-bc37df9bd112","testCaseStartedId":"5b3859da-a80e-4835-8795-e4ff9812ad11"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"4","nanos":403387800}},"timestamp":{"seconds":"1639409473","nanos":172426000},"testStepId":"77fda82d-a198-4cca-a5fe-bc37df9bd112","testCaseStartedId":"5b3859da-a80e-4835-8795-e4ff9812ad11"}},{"testStepStarted":{"timestamp":{"seconds":"1639409473","nanos":173371000},"testStepId":"0a71d6ba-673b-4581-af91-93c665bca429","testCaseStartedId":"5b3859da-a80e-4835-8795-e4ff9812ad11"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":422874500}},"timestamp":{"seconds":"1639409473","nanos":596245500},"testStepId":"0a71d6ba-673b-4581-af91-93c665bca429","testCaseStartedId":"5b3859da-a80e-4835-8795-e4ff9812ad11"}},{"testStepStarted":{"timestamp":{"seconds":"1639409473","nanos":597246800},"testStepId":"a4ab70fa-a945-4a7e-8465-eb56a7ed0edb","testCaseStartedId":"5b3859da-a80e-4835-8795-e4ff9812ad11"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{}},"timestamp":{"seconds":"1639409473","nanos":597246800},"testStepId":"a4ab70fa-a945-4a7e-8465-eb56a7ed0edb","testCaseStartedId":"5b3859da-a80e-4835-8795-e4ff9812ad11"}},{"testCaseFinished":{"timestamp":{"seconds":"1639409473","nanos":597246800},"testCaseStartedId":"5b3859da-a80e-4835-8795-e4ff9812ad11"}},{"stepDefinition":{"id":"c485c094-8206-457d-ab0d-89892fea5724","pattern":{"source":"User performs the cookie validation"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_performs_the_cookie_validation"}}}},{"stepDefinition":{"id":"9ba99702-75bd-4daa-a938-dca11df9c6a7","pattern":{"source":"User click on submit button with valid formdata"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_click_on_submit_button_with_valid_formdata"}}}},{"stepDefinition":{"id":"191d19e9-698c-455b-9e70-93f4643dad4b","pattern":{"source":"User click on the Registration radio button"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_click_on_the_registration_radio_button"}}}},{"stepDefinition":{"id":"27444b53-dc2c-482d-9748-bd12c0071cf7","pattern":{"source":"User navigated to the next form page"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_navigated_to_the_next_form_page"}}}},{"stepDefinition":{"id":"c2bcc238-729f-479f-bf2a-947de51a94ce","pattern":{"source":"User click on submit button without form data"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_click_on_submit_button_without_form_data"}}}},{"stepDefinition":{"id":"dae102b4-4419-41c9-a04e-5186aebea0cd","pattern":{"source":"User get navigated to next Registerationpage successfully"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_get_navigated_to_next_registerationpage_successfully"}}}},{"stepDefinition":{"id":"2e8ad734-db1c-4111-9417-b0db1bae75b7","pattern":{"source":"User get navigated to next personalinfopage successfully"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_get_navigated_to_next_personalinfopage_successfully"}}}},{"stepDefinition":{"id":"46e142fa-74b3-436f-b06e-238ac4596afd","pattern":{"source":"Validate the empty fields are shown with error message"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"validate_the_empty_fields_are_shown_with_error_message"}}}},{"stepDefinition":{"id":"e00b63e5-0b9f-4401-9420-d866e5c7dc05","pattern":{"source":"User opens the URL {string}"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_opens_the_url","methodParameterTypes":["java.lang.String"]}}}},{"stepDefinition":{"id":"d6f16f5a-cd52-4651-af3b-294c68f86253","pattern":{"source":"User Enters the emailaddress"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_enters_the_emailaddress"}}}},{"hook":{"id":"a83178b6-6831-4e8a-86f0-f88481f9a770","sourceReference":{"javaMethod":{"className":"Stepdefs.BaseClass","methodName":"afterScenario","methodParameterTypes":["io.cucumber.java.Scenario"]}}}},{"testCase":{"id":"89269975-18fa-49d7-b3bd-13e79efcf072","pickleId":"eed5f7fb-b4b9-4525-8d55-c4459c05accd","testSteps":[{"id":"ccbe9a57-56ea-4c76-912f-3922c01dfbf4","pickleStepId":"1b3e443f-83bd-48d0-b642-7c55ba7503a2","stepDefinitionIds":["191d19e9-698c-455b-9e70-93f4643dad4b"],"stepMatchArgumentsLists":[{}]},{"id":"16e66c8f-517f-41fe-9c1c-3c7045afd45d","pickleStepId":"df7ef034-9f70-4d44-8711-67f84d73452e","stepDefinitionIds":["2e8ad734-db1c-4111-9417-b0db1bae75b7"],"stepMatchArgumentsLists":[{}]},{"id":"9433dce1-70e5-4131-9828-aad861287a87","hookId":"a83178b6-6831-4e8a-86f0-f88481f9a770"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1639409473","nanos":602233000},"testCaseId":"89269975-18fa-49d7-b3bd-13e79efcf072","id":"9315d5a0-c546-4c00-8ac6-6397825687dd"}},{"testStepStarted":{"timestamp":{"seconds":"1639409473","nanos":603227000},"testStepId":"ccbe9a57-56ea-4c76-912f-3922c01dfbf4","testCaseStartedId":"9315d5a0-c546-4c00-8ac6-6397825687dd"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":202458400}},"timestamp":{"seconds":"1639409473","nanos":805685400},"testStepId":"ccbe9a57-56ea-4c76-912f-3922c01dfbf4","testCaseStartedId":"9315d5a0-c546-4c00-8ac6-6397825687dd"}},{"testStepStarted":{"timestamp":{"seconds":"1639409473","nanos":805685400},"testStepId":"16e66c8f-517f-41fe-9c1c-3c7045afd45d","testCaseStartedId":"9315d5a0-c546-4c00-8ac6-6397825687dd"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"3","nanos":55767500}},"timestamp":{"seconds":"1639409476","nanos":861452900},"testStepId":"16e66c8f-517f-41fe-9c1c-3c7045afd45d","testCaseStartedId":"9315d5a0-c546-4c00-8ac6-6397825687dd"}},{"testStepStarted":{"timestamp":{"seconds":"1639409476","nanos":862447100},"testStepId":"9433dce1-70e5-4131-9828-aad861287a87","testCaseStartedId":"9315d5a0-c546-4c00-8ac6-6397825687dd"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{}},"timestamp":{"seconds":"1639409476","nanos":862447100},"testStepId":"9433dce1-70e5-4131-9828-aad861287a87","testCaseStartedId":"9315d5a0-c546-4c00-8ac6-6397825687dd"}},{"testCaseFinished":{"timestamp":{"seconds":"1639409476","nanos":863444500},"testCaseStartedId":"9315d5a0-c546-4c00-8ac6-6397825687dd"}},{"stepDefinition":{"id":"36827b4f-7da3-4e4a-ad34-b860ac796a16","pattern":{"source":"User performs the cookie validation"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_performs_the_cookie_validation"}}}},{"stepDefinition":{"id":"33b931d9-c131-4b60-9ac6-50091f547aa9","pattern":{"source":"User click on submit button with valid formdata"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_click_on_submit_button_with_valid_formdata"}}}},{"stepDefinition":{"id":"669753e6-4d89-4189-aaca-09c47c96b33c","pattern":{"source":"User click on the Registration radio button"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_click_on_the_registration_radio_button"}}}},{"stepDefinition":{"id":"04a2e9b8-3bf4-4e2b-a097-6d732746067d","pattern":{"source":"User navigated to the next form page"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_navigated_to_the_next_form_page"}}}},{"stepDefinition":{"id":"1f19217f-7d29-4f29-bff3-1eb47e7cb455","pattern":{"source":"User click on submit button without form data"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_click_on_submit_button_without_form_data"}}}},{"stepDefinition":{"id":"9ed40199-04ea-43c9-81a0-9da95ebc3aba","pattern":{"source":"User get navigated to next Registerationpage successfully"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_get_navigated_to_next_registerationpage_successfully"}}}},{"stepDefinition":{"id":"c491a0ca-a17c-4dfc-818b-a1f6d4f77186","pattern":{"source":"User get navigated to next personalinfopage successfully"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_get_navigated_to_next_personalinfopage_successfully"}}}},{"stepDefinition":{"id":"8afa27c2-1008-4eb5-9e25-62cd54176f78","pattern":{"source":"Validate the empty fields are shown with error message"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"validate_the_empty_fields_are_shown_with_error_message"}}}},{"stepDefinition":{"id":"788e2cad-0c6f-4839-b766-5b6b8bcdbcd7","pattern":{"source":"User opens the URL {string}"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_opens_the_url","methodParameterTypes":["java.lang.String"]}}}},{"stepDefinition":{"id":"ec61f8f4-32c7-439e-abd2-6d027fa36957","pattern":{"source":"User Enters the emailaddress"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_enters_the_emailaddress"}}}},{"hook":{"id":"a83178b6-6831-4e8a-86f0-f88481f9a770","sourceReference":{"javaMethod":{"className":"Stepdefs.BaseClass","methodName":"afterScenario","methodParameterTypes":["io.cucumber.java.Scenario"]}}}},{"testCase":{"id":"55cf4ecc-2ea0-4e9d-b6c3-2f108bb129fc","pickleId":"153c3244-1967-4b09-b1c3-1253c645d55a","testSteps":[{"id":"cb6a1ce5-a3ba-4a33-9207-3bce8e98dcfb","pickleStepId":"cdbc22c0-ca2b-4283-8d35-e62297c6d10a","stepDefinitionIds":["1f19217f-7d29-4f29-bff3-1eb47e7cb455"],"stepMatchArgumentsLists":[{}]},{"id":"531d5191-e251-4ed7-bb6a-4c5c64240930","pickleStepId":"f880c62f-d73f-4ac5-8c70-fc7650cc5296","stepDefinitionIds":["8afa27c2-1008-4eb5-9e25-62cd54176f78"],"stepMatchArgumentsLists":[{}]},{"id":"56202dcb-2906-443d-b0ad-887afe9e02fe","hookId":"a83178b6-6831-4e8a-86f0-f88481f9a770"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1639409476","nanos":868430900},"testCaseId":"55cf4ecc-2ea0-4e9d-b6c3-2f108bb129fc","id":"0992343f-4e30-48d5-8caa-bda60f66b3d7"}},{"testStepStarted":{"timestamp":{"seconds":"1639409476","nanos":869427900},"testStepId":"cb6a1ce5-a3ba-4a33-9207-3bce8e98dcfb","testCaseStartedId":"0992343f-4e30-48d5-8caa-bda60f66b3d7"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":93045200}},"timestamp":{"seconds":"1639409476","nanos":962473100},"testStepId":"cb6a1ce5-a3ba-4a33-9207-3bce8e98dcfb","testCaseStartedId":"0992343f-4e30-48d5-8caa-bda60f66b3d7"}},{"testStepStarted":{"timestamp":{"seconds":"1639409476","nanos":963469900},"testStepId":"531d5191-e251-4ed7-bb6a-4c5c64240930","testCaseStartedId":"0992343f-4e30-48d5-8caa-bda60f66b3d7"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":525921300}},"timestamp":{"seconds":"1639409477","nanos":489391200},"testStepId":"531d5191-e251-4ed7-bb6a-4c5c64240930","testCaseStartedId":"0992343f-4e30-48d5-8caa-bda60f66b3d7"}},{"testStepStarted":{"timestamp":{"seconds":"1639409477","nanos":490388900},"testStepId":"56202dcb-2906-443d-b0ad-887afe9e02fe","testCaseStartedId":"0992343f-4e30-48d5-8caa-bda60f66b3d7"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{}},"timestamp":{"seconds":"1639409477","nanos":490388900},"testStepId":"56202dcb-2906-443d-b0ad-887afe9e02fe","testCaseStartedId":"0992343f-4e30-48d5-8caa-bda60f66b3d7"}},{"testCaseFinished":{"timestamp":{"seconds":"1639409477","nanos":490388900},"testCaseStartedId":"0992343f-4e30-48d5-8caa-bda60f66b3d7"}},{"stepDefinition":{"id":"9458d9ec-32c5-4255-9ffb-7d473532b638","pattern":{"source":"User performs the cookie validation"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_performs_the_cookie_validation"}}}},{"stepDefinition":{"id":"0b29480e-6727-419f-8866-b3e81132f881","pattern":{"source":"User click on submit button with valid formdata"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_click_on_submit_button_with_valid_formdata"}}}},{"stepDefinition":{"id":"26b9e60f-78c1-4587-83a5-4b12b23f6699","pattern":{"source":"User click on the Registration radio button"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_click_on_the_registration_radio_button"}}}},{"stepDefinition":{"id":"f63a54ee-0fce-4231-a071-809c2f6ded63","pattern":{"source":"User navigated to the next form page"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_navigated_to_the_next_form_page"}}}},{"stepDefinition":{"id":"7f77c16f-3981-4608-befa-25698c63d73a","pattern":{"source":"User click on submit button without form data"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_click_on_submit_button_without_form_data"}}}},{"stepDefinition":{"id":"02c5ae01-d92b-4d99-b941-218a215edff5","pattern":{"source":"User get navigated to next Registerationpage successfully"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_get_navigated_to_next_registerationpage_successfully"}}}},{"stepDefinition":{"id":"23902110-779a-4cf1-967a-155595f40d37","pattern":{"source":"User get navigated to next personalinfopage successfully"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_get_navigated_to_next_personalinfopage_successfully"}}}},{"stepDefinition":{"id":"f2718d3c-471c-4fc3-aeff-92a5b3b2c19c","pattern":{"source":"Validate the empty fields are shown with error message"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"validate_the_empty_fields_are_shown_with_error_message"}}}},{"stepDefinition":{"id":"14aff6c9-c7e2-49cc-a696-99bcbdd8cbf3","pattern":{"source":"User opens the URL {string}"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_opens_the_url","methodParameterTypes":["java.lang.String"]}}}},{"stepDefinition":{"id":"e786ef3b-666d-4bc0-957a-1525cd251a83","pattern":{"source":"User Enters the emailaddress"},"sourceReference":{"javaMethod":{"className":"Stepdefs.Check24AutomationStepdefinition","methodName":"user_enters_the_emailaddress"}}}},{"hook":{"id":"a83178b6-6831-4e8a-86f0-f88481f9a770","sourceReference":{"javaMethod":{"className":"Stepdefs.BaseClass","methodName":"afterScenario","methodParameterTypes":["io.cucumber.java.Scenario"]}}}},{"testCase":{"id":"c872ebf8-78ff-474d-815e-489e88bd5f00","pickleId":"cf536a5f-9736-4028-be4d-217f90ccb5c2","testSteps":[{"id":"2686b014-3b6b-42ef-9c20-0e8081cbfa65","pickleStepId":"f62a56bb-40ae-4e13-bd84-789c8e35bb5e","stepDefinitionIds":["0b29480e-6727-419f-8866-b3e81132f881"],"stepMatchArgumentsLists":[{}]},{"id":"69b5a758-6373-4309-9839-5ac4c2eb70f7","pickleStepId":"bd95c8d6-df99-4676-a420-aa39d8222825","stepDefinitionIds":["f63a54ee-0fce-4231-a071-809c2f6ded63"],"stepMatchArgumentsLists":[{}]},{"id":"3a13c326-b9b8-480b-821d-90cc1e982242","hookId":"a83178b6-6831-4e8a-86f0-f88481f9a770"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1639409477","nanos":493382900},"testCaseId":"c872ebf8-78ff-474d-815e-489e88bd5f00","id":"c48d68f3-9e5b-4275-bee2-8487b6e3aca3"}},{"testStepStarted":{"timestamp":{"seconds":"1639409477","nanos":494378500},"testStepId":"2686b014-3b6b-42ef-9c20-0e8081cbfa65","testCaseStartedId":"c48d68f3-9e5b-4275-bee2-8487b6e3aca3"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":533991300}},"timestamp":{"seconds":"1639409478","nanos":28369800},"testStepId":"2686b014-3b6b-42ef-9c20-0e8081cbfa65","testCaseStartedId":"c48d68f3-9e5b-4275-bee2-8487b6e3aca3"}},{"testStepStarted":{"timestamp":{"seconds":"1639409478","nanos":29367300},"testStepId":"69b5a758-6373-4309-9839-5ac4c2eb70f7","testCaseStartedId":"c48d68f3-9e5b-4275-bee2-8487b6e3aca3"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":614198800}},"timestamp":{"seconds":"1639409479","nanos":643566100},"testStepId":"69b5a758-6373-4309-9839-5ac4c2eb70f7","testCaseStartedId":"c48d68f3-9e5b-4275-bee2-8487b6e3aca3"}},{"testStepStarted":{"timestamp":{"seconds":"1639409479","nanos":643566100},"testStepId":"3a13c326-b9b8-480b-821d-90cc1e982242","testCa

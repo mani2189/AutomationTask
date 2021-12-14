@@ -1,0 +1,246 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-12-13T15:30:54.767Z",
+        "line": 4,
+        "name": "Successfull Cookie Validation",
+        "description": "",
+        "id": "registration;successfull-cookie-validation",
+        "after": [
+          {
+            "result": {
+              "duration": 971100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Stepdefs.BaseClass.afterScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 13904602600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User opens the URL \"https://finanzen.check24.de/accounts/d/kreditkarte/result.html\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://finanzen.check24.de/accounts/d/kreditkarte/result.html\"",
+                  "offset": 19
+                }
+              ],
+              "location": "Stepdefs.Check24AutomationStepdefinition.user_opens_the_url(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13984800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User performs the cookie validation",
+            "match": {
+              "location": "Stepdefs.Check24AutomationStepdefinition.user_performs_the_cookie_validation()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-13T15:31:08.769Z",
+        "line": 9,
+        "name": "Successfull Page navigation after filling email id",
+        "description": "",
+        "id": "registration;successfull-page-navigation-after-filling-email-id",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "Stepdefs.BaseClass.afterScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4403387800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User Enters the emailaddress",
+            "match": {
+              "location": "Stepdefs.Check24AutomationStepdefinition.user_enters_the_emailaddress()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 422874500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User get navigated to next Registerationpage successfully",
+            "match": {
+              "location": "Stepdefs.Check24AutomationStepdefinition.user_get_navigated_to_next_registerationpage_successfully()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-13T15:31:13.602Z",
+        "line": 15,
+        "name": "Successfull Page navigation after clicking on the registration radio button",
+        "description": "",
+        "id": "registration;successfull-page-navigation-after-clicking-on-the-registration-radio-button",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "Stepdefs.BaseClass.afterScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 202458400,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User click on the Registration radio button",
+            "match": {
+              "location": "Stepdefs.Check24AutomationStepdefinition.user_click_on_the_registration_radio_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3055767500,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "User get navigated to next personalinfopage successfully",
+            "match": {
+              "location": "Stepdefs.Check24AutomationStepdefinition.user_get_navigated_to_next_personalinfopage_successfully()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-13T15:31:16.868Z",
+        "line": 20,
+        "name": "Successfull Error messages validation",
+        "description": "",
+        "id": "registration;successfull-error-messages-validation",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "Stepdefs.BaseClass.afterScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 93045200,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "User click on submit button without form data",
+            "match": {
+              "location": "Stepdefs.Check24AutomationStepdefinition.user_click_on_submit_button_without_form_data()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 525921300,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Validate the empty fields are shown with error message",
+            "match": {
+              "location": "Stepdefs.Check24AutomationStepdefinition.validate_the_empty_fields_are_shown_with_error_message()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-13T15:31:17.493Z",
+        "line": 25,
+        "name": "Successfull Submission of the form",
+        "description": "",
+        "id": "registration;successfull-submission-of-the-form",
+        "after": [
+          {
+            "result": {
+              "duration": 997000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Stepdefs.BaseClass.afterScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 533991300,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "User click on submit button with valid formdata",
+            "match": {
+              "location": "Stepdefs.Check24AutomationStepdefinition.user_click_on_submit_button_with_valid_formdata()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1614198800,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "User navigated to the next form page",
+            "match": {
+              "location": "Stepdefs.Check24AutomationStepdefinition.user_navigated_to_the_next_form_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Registration",
+    "description": "",
+    "id": "registration",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Features/Check24AutomationTask.feature",
+    "tags": []
+  }
+]
